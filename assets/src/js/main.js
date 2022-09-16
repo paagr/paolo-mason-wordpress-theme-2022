@@ -1,4 +1,5 @@
-import General from './_generalScripts';
+// import General from './_generalScripts';
+import HomeBg from './_front-page-bg';
 
 const App = {
 
@@ -7,10 +8,18 @@ const App = {
 	 */
 	init() {
 		// General scripts
-		function initGeneral() {
-			return new General();
+		// function initGeneral() {
+		// 	return new General();
+		// }
+		// initGeneral();
+
+		// Front Page background
+		function initHomeBg() {
+			return new HomeBg();
 		}
-		initGeneral();
+		if (document.querySelector('.home')) {
+			initHomeBg();
+		}
 	}
 
 };
